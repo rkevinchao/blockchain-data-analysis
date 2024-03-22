@@ -1,92 +1,127 @@
 <!-- PROJECT LOGO -->
-<h3 align="center" style="font-size: 24px;">Market Depth Analysis for the Ekubo Protocol (v3)</h3>
+<a name="readme-top"></a>
+
+<h3 align="center" style="font-size: 24px;">Ekubo Protocol (v3) Market Depth Analysis and Profit/Loss Calculation</h3>
 <div>
   <p align="center" style="font-size: 22px;">
-    Kevin Chao </p>
+    Kevin Chao, Ph.D.
+  </p>
   <p align="center">    
-    <br /> Email: 
-    		<a href="mailto:kevinchao@gmail.com">kevinchao@gmail.com</a>
-    <br /> LinkedIn Profile:
-    		<a href="https://www.linkedin.com/in/kevin-chao-com/">https://www.linkedin.com/in/kevin-chao-com/</a>
+    Email: 
+    <a href="mailto:kevinchao@gmail.com">kevinchao@gmail.com</a>
+    <br /> LinkedIn:
+    <a href="https://www.linkedin.com/in/kevin-chao-com/">https://www.linkedin.com/in/kevin-chao-com/</a>
     <br /> GitHub:
-    		<a href="https://github.com/rkevinchao">https://github.com/rkevinchao</a>
+    <a href="https://github.com/rkevinchao">https://github.com/rkevinchao</a>
+    <br /> Personal Website:
+    <a href="https://kevinchao.com/">https://kevinchao.com/</a>
     <br />
   </p>
 </div>
 
-
 <!-- TABLE OF CONTENTS -->
-<details>
+<details open>
   <summary>Table of Contents</summary>
   <ol>
+    <li> 
+      <a href="#about-the-project">About The Project</a>.    <!-- 1. ABOUT THE PROJECT -->
+    </li>
+    <li><a href="#summary">Summary</a></li>                  <!-- 2. Summary -->
     <li>
-      <a href="#about-the-project">About The Project</a>
+      <a href="#data-methods">Data and Methods</a>           <!-- 3. Data and Methods -->
       <ul>
-        <li><a href="#built-with">Built With</a></li>
+        <li><a href="#prerequisites">Ekubo Dataset</a></li>    <!-- 3.1 Ekubo -->
+        <li><a href="#installation">Methods</a></li>           <!-- 3.2 Methods -->
       </ul>
     </li>
     <li>
-      <a href="#getting-started">Getting Started</a>
+      <a href="#methods">Market Depth Analysis</a>.          <!-- 4. Market Depth -->
       <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
+        <li><a href="#prerequisites">ETH/USDC and USDC/USDT</a></li> <!--4.1 USDC/USDT-->
+        <li><a href="#installation">STRK/ETH and STRK/USDC</a></li> <!--4.2 STRK/USDC-->
       </ul>
-    </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
+    </li>    
+    <li>
+    	<a href="#usage">Profit and Loss (PnL) Calculations</a></li> <!--5. PnL-->
+       <ul>
+        <li><a href="#prerequisites">ETH/USDC</a></li>               <!--5.1 USDC/USDT -->
+        <li><a href="#installation">STRK/ETH and STRK/USDC</a></li>  <!--5.2 STRK/ETH -->
+       </ul>
+    <li><a href="#references">Discussion and Conclusion</a></li>
+    <li><a href="#references">References</a></li>
   </ol>
 </details>
 
 
 
 <!-- ABOUT THE PROJECT -->
-## About The Project
+## 1. About The Project
+The goal is to analyze the market depth of `Ekubo Protocol (v3)`[[1](https://docs.ekubo.org)] and provide profit and loss (PnL) calculation. The Ekuubo Protocol is an  automated market maker (AMM) designed for `Starknet`[[2](https://www.starknet.io/en/learn/what-is-starknet)], which is a layer 2 network on Ethereum providing a decentralized platform. Its unique features include concentrated liquidity and an extensible, gas-efficient architecture.
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+The deliverable results of this project include 
 
-Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `github_username`, `repo_name`, `twitter_handle`, `linkedin_username`, `email_client`, `email`, `project_title`, `project_description`
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-## Summary
-
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
-
-Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `github_username`, `repo_name`, `twitter_handle`, `linkedin_username`, `email_client`, `email`, `project_title`, `project_description`
+Project Link: [https://github.com/rkevinchao/blockchain-data-analysis](https://github.com/rkevinchao/blockchain-data-analysis)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
+## 2. Summary
+Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `github_username`, `repo_name`, `twitter_handle`, `linkedin_username`, `email_client`, `email`, `project_title`, `project_description`
 
-### Built With
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+### 2.1 Market Depth of 
 
 * [![Next][Next.js]][Next-url]
 * [![React][React.js]][React-url]
-* [![Vue][Vue.js]][Vue-url]
-* [![Angular][Angular.io]][Angular-url]
-* [![Svelte][Svelte.dev]][Svelte-url]
-* [![Laravel][Laravel.com]][Laravel-url]
-* [![Bootstrap][Bootstrap.com]][Bootstrap-url]
-* [![JQuery][JQuery.com]][JQuery-url]
+
+### 2.2 Built With
+
+* [![Next][Next.js]][Next-url]
+* [![React][React.js]][React-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 
 <!-- GETTING STARTED -->
-## Getting Started
+## 3. Data and Methods
 
 This is an example of how you may give instructions on setting up your project locally.
 To get a local copy up and running follow these simple example steps.
 
-### Prerequisites
+### 3.1 The Ekubo Dataset
+* `BLOCK_NUMBER`: The block when the transaction occurred
 
 This is an example of how to list things you need to use the software and how to install them.
 * npm
   ```sh
   npm install npm@latest -g
   ```
+
+	- `BLOCK_TIMESTAMP`: The timestamp of the block
+	- `TX_HASH`: The unique hash of the transaction where the event occurred (a given transaction can include multiple events)
+	- `TX_ID`: An identifier that indicates where in the block the transaction occurred
+	- `POOL_ID`: A unique identifier of the liquidity pool
+	- `TOKEN0_ADDRESS`: Starknet address of token0
+	- `TOKEN1_ADDRESS`: Starknet address of token1
+	- `EVENT_NAME`: The type of event (`Mint`, `Burn`, or `Swap`)
+	- `FROM_ADDRESS`: The user’s address
+	- `TO_ADDRESS`: The contract address
+	- `TOKEN0_RAW_AMOUNT`: Raw (not decimal adjusted) number of token0 transferred
+	- `TOKEN0_DECIMALS`: Number of decimal places of token0
+	- `TOKEN0_REAL_AMOUNT`: `TOKEN0_RAW_AMOUNT / 10 ** TOKEN0_DECIMALS`
+	- `TOKEN1_RAW_AMOUNT`: Raw (not decimal adjusted) number of token1 transferred
+	- `TOKEN1_DECIMALS`: Number of decimal places of token1
+	- `TOKEN1_REAL_AMOUNT`: `TOKEN1_RAW_AMOUNT / 10 ** TOKEN1_DECIMALS`
+	- `FEE_TIER`: The fee rate of the pool (only Swap transactions pay fees)
+	- `LIQUIDITY_AMOUNT`: The amount of liquidity added in a Mint or subtracted in a Burn between `LOWER_TICK` and `UPPER_TICK` (NB: This number is not denominated in either token. You need Uniswap-style constant product math to convert this to a token amount.)
+	- `LOWER_TICK`: The lower bound of the tick range that liquidity was added to in a Mint or subtracted from in Burn
+	- `UPPER_TICK`: The upper bound of the tick range that liquidity was added to in a Mint or subtracted from in Burn
+	- `SWAP_TICK`: The final price tick reached after a Swap (set to 0 for all Mints and Burns)
+	- `TICK_SPACING`: Defines the intervals on which users are allowed to add or subtract liquidity in the given pool (not relevant to this assignment)
+
+
 
 ### Installation
 
@@ -152,7 +187,7 @@ Don't forget to give the project a star! Thanks again!
 
 
 <!-- LICENSE -->
-## License
+## Discussion
 
 Distributed under the MIT License. See `LICENSE.txt` for more information.
 
@@ -161,55 +196,22 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 
 <!-- CONTACT -->
-## Contact
+## Conclusion
 
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email@email_client.com
+Kevin Chao - [@twitter_handle](https://twitter.com/twitter_handle) - [https://github.com/rkevinchao/blockchain-data-analysis](https://github.com/rkevinchao/blockchain-data-analysis)
 
-Project Link: [https://github.com/github_username/repo_name](https://github.com/github_username/repo_name)
+Project Link: [https://github.com/rkevinchao/blockchain-data-analysis](https://github.com/rkevinchao/blockchain-data-analysis)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 
 <!-- ACKNOWLEDGMENTS -->
-## Acknowledgments
+## References
+<a name="references"></a>
 
-* []()
-* []()
-* []()
+* [[1](https://docs.ekubo.org)] https://docs.ekubo.org
+* [[2](https://www.starknet.io/en/learn/what-is-starknet)] https://www.starknet.io/en/learn/what-is-starknet
+* [3]()
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/github_username/repo_name.svg?style=for-the-badge
-[contributors-url]: https://github.com/github_username/repo_name/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/github_username/repo_name.svg?style=for-the-badge
-[forks-url]: https://github.com/github_username/repo_name/network/members
-[stars-shield]: https://img.shields.io/github/stars/github_username/repo_name.svg?style=for-the-badge
-[stars-url]: https://github.com/github_username/repo_name/stargazers
-[issues-shield]: https://img.shields.io/github/issues/github_username/repo_name.svg?style=for-the-badge
-[issues-url]: https://github.com/github_username/repo_name/issues
-[license-shield]: https://img.shields.io/github/license/github_username/repo_name.svg?style=for-the-badge
-[license-url]: https://github.com/github_username/repo_name/blob/master/LICENSE.txt
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/linkedin_username
-[product-screenshot]: images/screenshot.png
-[Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
-[Next-url]: https://nextjs.org/
-[React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
-[React-url]: https://reactjs.org/
-[Vue.js]: https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D
-[Vue-url]: https://vuejs.org/
-[Angular.io]: https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white
-[Angular-url]: https://angular.io/
-[Svelte.dev]: https://img.shields.io/badge/Svelte-4A4A55?style=for-the-badge&logo=svelte&logoColor=FF3E00
-[Svelte-url]: https://svelte.dev/
-[Laravel.com]: https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white
-[Laravel-url]: https://laravel.com
-[Bootstrap.com]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
-[Bootstrap-url]: https://getbootstrap.com
-[JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
-[JQuery-url]: https://jquery.com 
