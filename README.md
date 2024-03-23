@@ -207,12 +207,6 @@ tag                                                       ETH_USDC_Mint
 Name: 110352, dtype: object
 ```
 
-* Plot % of rows for each tag among the whole dataset: 
-<img src="images/fig_01a_01_bar_plot.png" alt="Bar Plot">
-
-* Date range plot for each tag:
-<img src="images/fig_01a_02_date_range_plot.png" alt="Date Range Plot">
-
 * In the Ekubo dataset, there are five types of trading pair (`Token0/Token1`) and three event types: 
 	1. STRK/ETH (Mint, Burn, and Swap)
 	2. STRK/USDC (Mint, Burn, and Swap)
@@ -226,15 +220,13 @@ Name: 110352, dtype: object
 	- USDC Token (in TOKEN0\_ADDRESS and TOKEN1\_ADDRESS): `0x053c91253bc9682c04929ca02ed00b3e423f6710d2ee7e0d5ebb06f3ecf368a8` [[5](https://starkscan.co/token/0x053c91253bc9682c04929ca02ed00b3e423f6710d2ee7e0d5ebb06f3ecf368a8)]
 	- USDT Token (in TOKEN1\_ADDRESS): `0x068f5c6a61780768455de69077e07e89787839bf8166decfbf92b645209c0fb8` [[6](https://starkscan.co/token/0x068f5c6a61780768455de69077e07e89787839bf8166decfbf92b645209c0fb8)]
 	- Ekubo Contract (in TO\_ADDRESS): `0x00000005dd3d2f4429af886cd1a3b08289dbcea99a294197e9eb43b0e0325b4b` [[7](https://starkscan.co/contract/0x00000005dd3d2f4429af886cd1a3b08289dbcea99a294197e9eb43b0e0325b4b)]
-	
 
-* Top five trading pair events in Ekubo:
-	1. ETH/USDC-Swap (54.0%)
-	2. USDC/USDT-Swap (24.6%)
-	3. ETH/USDC-Mint (7.61%)
-	4. STRK/ETH-Swap (4.38%)
-	5. ETH/USDC-Burn (3.82%)
- 
+* Plot % of rows for each tag among the whole dataset: 
+<img src="images/fig_01a_01_bar_plot.png" alt="Bar Plot">
+
+* Date range plot for each tag:
+<img src="images/fig_01a_02_date_range_plot.png" alt="Date Range Plot">
+
 * Date range for each trading pair:
 	- The whole dataset: `2023-08-21 18:06:57` to `2024-02-25 03:57:43`
 	- ETH/USDC pools: `2023-08-21 18:06:57` to `2024-02-25 03:57:43`
@@ -243,6 +235,12 @@ Name: 110352, dtype: object
 	- STRK/USDC pools: `024-02-11 11:21:18` to `2024-02-25 03:57:26`
 	- STRK/USDT pools: `2024-02-19 16:26:11` to `2024-02-25 03:36:21`
 
+* Top five trading pair events in Ekubo:
+	1. ETH/USDC-Swap (54.0%)
+	2. USDC/USDT-Swap (24.6%)
+	3. ETH/USDC-Mint (7.61%)
+	4. STRK/ETH-Swap (4.38%)
+	5. ETH/USDC-Burn (3.82%)
    
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -344,12 +342,12 @@ Don't forget to give the project a star! Thanks again!
 ## 8. References
 <a name="references"></a>
 
-* [[1](https://docs.ekubo.org)] https://docs.ekubo.org
-* [[2](https://www.starknet.io/en/learn/what-is-starknet)] https://www.starknet.io/en/learn/what-is-starknet
+* [[1](https://docs.ekubo.org)] Ekubo Protocol, https://docs.ekubo.org
+* [[2](https://www.starknet.io/en/learn/what-is-starknet)] Starknet, https://www.starknet.io/en/learn/what-is-starknet
 * [[3](https://starkscan.co/token/0x04718f5a0fc34cc1af16a1cdee98ffb20c31f5cd61d6ab07201858f4287c938d)] STRK Token, https://starkscan.co/token/0x04718f5a0fc34cc1af16a1cdee98ffb20c31f5cd61d6ab07201858f4287c938d
 * [[4](https://starkscan.co/token/0x049d36570d4e46f48e99674bd3fcc84644ddd6b96f7c741b1562b82f9e004dc7)] ETH Token, https://starkscan.co/token/0x049d36570d4e46f48e99674bd3fcc84644ddd6b96f7c741b1562b82f9e004dc7 
-* [[5](https://starkscan.co/token/0x053c91253bc9682c04929ca02ed00b3e423f6710d2ee7e0d5ebb06f3ecf368a8)] USDC Token, 0x053c91253bc9682c04929ca02ed00b3e423f6710d2ee7e0d5ebb06f3ecf368a8
-* [[6](https://starkscan.co/token/0x068f5c6a61780768455de69077e07e89787839bf8166decfbf92b645209c0fb8)] USDT Token, 0x068f5c6a61780768455de69077e07e89787839bf8166decfbf92b645209c0fb8 
+* [[5](https://starkscan.co/token/0x053c91253bc9682c04929ca02ed00b3e423f6710d2ee7e0d5ebb06f3ecf368a8)] USDC Token, https://starkscan.co/token/0x053c91253bc9682c04929ca02ed00b3e423f6710d2ee7e0d5ebb06f3ecf368a8
+* [[6](https://starkscan.co/token/0x068f5c6a61780768455de69077e07e89787839bf8166decfbf92b645209c0fb8)] USDT Token, https://starkscan.co/token/0x068f5c6a61780768455de69077e07e89787839bf8166decfbf92b645209c0fb8 
 * [[7](https://starkscan.co/contract/0x00000005dd3d2f4429af886cd1a3b08289dbcea99a294197e9eb43b0e0325b4b)] Ekubo Contract, https://starkscan.co/contract/0x00000005dd3d2f4429af886cd1a3b08289dbcea99a294197e9eb43b0e0325b4b
 * [[]()] 
 * [[]()] 
