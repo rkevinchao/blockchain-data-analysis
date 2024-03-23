@@ -70,7 +70,7 @@ The goal is to analyze the market depth of `Ekubo Protocol (v3)`[[1](https://doc
 
 The targeted tasks consist of two parts: (1) Providing market depth for the Ekubo Protocol for STRK/ETH, STRK/USDC, ETH/USDC, and USDC/USDT pools. (2) Calculating the Profit and Loss (PnL) for a set of hypothetical positions held by the most profitable liquidity providers.
 
-The deliverable results include a comprehensive report that details the methodology, findings, and recommendations. This report would be supported by data visualizations and code within a Jupyter Notebook to enhance the analysis.
+The deliverable results include a comprehensive report that details the methodology, findings, and recommendations. This report would be supported by data visualizations and code within Jupyter Notebooks to enhance the analysis.
 
 Project Link: [https://github.com/rkevinchao/blockchain-data-analysis](https://github.com/rkevinchao/blockchain-data-analysis)
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -122,10 +122,10 @@ The entire Ekubo Protocol dataset is stored in a Parquet file (which is not an o
 * <a href="https://github.com/rkevinchao/blockchain-data-analysis/blob/main/01a_dataset_overview.ipynb">01a\_dataset\_overview.ipynb</a>: This Jupyter Notebook includes the code used to generate the results presented in Session 3.2.
 
 * An updated dataframe table:
-	* On the top of the raw dataframe, I added below additioanl columns to have a better overview on the dataset:
-		* `Token0_name`: based on inforamtion from `TOKEN0_ADDRESS`
-		* `Token1_name`: based on inforamtion from `TOKEN1_ADDRESS`
-		* `tag`: for classify each trading-pair-type, for example, `STRK_ETH_Swap`
+	* At the top of the raw dataframe, I added the following additional columns to provide a better overview of the dataset:
+		* `Token0_name`: based on inforamtion from `TOKEN0_ADDRESS`, e.g., `STRK`
+		* `Token1_name`: based on inforamtion from `TOKEN1_ADDRESS`, e.g., `USDC`
+		* `tag`: for classify each trading-pair-type, e.g., `STRK_ETH_Swap`
 
 * An overview of the updated dataframe structure:
 
@@ -173,7 +173,7 @@ memory usage: 646.2+ MB
 * A quick view of the values in one randomly selected row:
 
 ```
-df.iloc[100]
+df.iloc[108]
 ```
 
 ```
@@ -213,14 +213,22 @@ Name: 110352, dtype: object
 * Date range plot for each tag:
 <img src="images/fig_01a_02_date_range_plot.png" alt="Date Range Plot">
 
-* In the Ekubo dataset, there are five types of trading pair and three event types: 
+* In the Ekubo dataset, there are five types of trading pair (`Token0/Token1`) and three event types: 
 	1. STRK/ETH (Mint, Burn, and Swap)
 	2. STRK/USDC (Mint, Burn, and Swap)
 	3. STRK/USDT (Mint, Burn, and Swap)
 	4. ETH/USDC (Mint, Burn, and Swap)
 	5. USDC/USDT (Mint, Burn, and Swap)
 
-* Top five trading pair events:
+* Addresses and Contract shown in Ekubo:
+	- STRK Token (in TOKEN0\_ADDRESS and TOKEN1\_ADDRESS): `0x04718f5a0fc34cc1af16a1cdee98ffb20c31f5cd61d6ab07201858f4287c938d` [[3](https://starkscan.co/token/0x04718f5a0fc34cc1af16a1cdee98ffb20c31f5cd61d6ab07201858f4287c938d)]
+	- ETH Token (in TOKEN0\_ADDRESS and TOKEN1\_ADDRESS): `0x049d36570d4e46f48e99674bd3fcc84644ddd6b96f7c741b1562b82f9e004dc7` [[4](https://starkscan.co/token/0x049d36570d4e46f48e99674bd3fcc84644ddd6b96f7c741b1562b82f9e004dc7)]
+	- USDC Token (in TOKEN0\_ADDRESS and TOKEN1\_ADDRESS): `0x053c91253bc9682c04929ca02ed00b3e423f6710d2ee7e0d5ebb06f3ecf368a8` [[5](https://starkscan.co/token/0x053c91253bc9682c04929ca02ed00b3e423f6710d2ee7e0d5ebb06f3ecf368a8)]
+	- USDT Token (in TOKEN1\_ADDRESS): `0x068f5c6a61780768455de69077e07e89787839bf8166decfbf92b645209c0fb8` [[6](https://starkscan.co/token/0x068f5c6a61780768455de69077e07e89787839bf8166decfbf92b645209c0fb8)]
+	- Ekubo Contract (in TO\_ADDRESS): `0x00000005dd3d2f4429af886cd1a3b08289dbcea99a294197e9eb43b0e0325b4b` [[7](https://starkscan.co/contract/0x00000005dd3d2f4429af886cd1a3b08289dbcea99a294197e9eb43b0e0325b4b)]
+	
+
+* Top five trading pair events in Ekubo:
 	1. ETH/USDC-Swap (54.0%)
 	2. USDC/USDT-Swap (24.6%)
 	3. ETH/USDC-Mint (7.61%)
@@ -338,6 +346,14 @@ Don't forget to give the project a star! Thanks again!
 
 * [[1](https://docs.ekubo.org)] https://docs.ekubo.org
 * [[2](https://www.starknet.io/en/learn/what-is-starknet)] https://www.starknet.io/en/learn/what-is-starknet
-* [3]()
+* [[3](https://starkscan.co/token/0x04718f5a0fc34cc1af16a1cdee98ffb20c31f5cd61d6ab07201858f4287c938d)] STRK Token, https://starkscan.co/token/0x04718f5a0fc34cc1af16a1cdee98ffb20c31f5cd61d6ab07201858f4287c938d
+* [[4](https://starkscan.co/token/0x049d36570d4e46f48e99674bd3fcc84644ddd6b96f7c741b1562b82f9e004dc7)] ETH Token, https://starkscan.co/token/0x049d36570d4e46f48e99674bd3fcc84644ddd6b96f7c741b1562b82f9e004dc7 
+* [[5](https://starkscan.co/token/0x053c91253bc9682c04929ca02ed00b3e423f6710d2ee7e0d5ebb06f3ecf368a8)] USDC Token, 0x053c91253bc9682c04929ca02ed00b3e423f6710d2ee7e0d5ebb06f3ecf368a8
+* [[6](https://starkscan.co/token/0x068f5c6a61780768455de69077e07e89787839bf8166decfbf92b645209c0fb8)] USDT Token, 0x068f5c6a61780768455de69077e07e89787839bf8166decfbf92b645209c0fb8 
+* [[7](https://starkscan.co/contract/0x00000005dd3d2f4429af886cd1a3b08289dbcea99a294197e9eb43b0e0325b4b)] Ekubo Contract, https://starkscan.co/contract/0x00000005dd3d2f4429af886cd1a3b08289dbcea99a294197e9eb43b0e0325b4b
+* [[]()] 
+* [[]()] 
+* [[]()] 
+* [[]()] 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
