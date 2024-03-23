@@ -167,7 +167,8 @@ Data columns (total 27 columns):
  25  Token1_name         object        
  26  tag                 object        
 dtypes: datetime64[ns](2), float64(9), int64(5), object(11)
-memory usage: 646.2+ MB```
+memory usage: 646.2+ MB
+```
 
 * A quick view of the values in one randomly selected row:
 
