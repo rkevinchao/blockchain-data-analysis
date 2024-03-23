@@ -7,13 +7,13 @@
     Kevin Chao, Ph.D.
   </p>
   <p align="center">    
-    LinkedIn: 
-    	<a href="https://www.linkedin.com/in/kevin-chao-com/">https://www.linkedin.com/in/kevin-chao-com/</a>
-    <br /> Email: 
+    Email: 
     	<a href="mailto:kevinchao@gmail.com">kevinchao@gmail.com</a>
+    <br /> LinkedIn: 
+    	<a href="https://www.linkedin.com/in/kevin-chao-com/">https://www.linkedin.com/in/kevin-chao-com/</a>
     <br /> GitHub:
     	<a href="https://github.com/rkevinchao">https://github.com/rkevinchao</a>
-    <br /> Personal Website:
+    <br /> Website:
     	<a href="https://kevinchao.com/">https://kevinchao.com/</a>
     <br />
   </p>
@@ -28,11 +28,17 @@
     </li>
     <li><a href="#summary">Summary</a></li>                   <!-- 2. Summary -->
     <li>
-      <a href="#data-methods">Data and Methods</a>            <!-- 3. Data and Methods -->
+      <a href="#ekubo-dataset">Ekubo Dataset</a>              <!-- 3. Ekubo DataSet -->
       <ul>
-        <li><a href="#ekubo-dataset">Ekubo Dataset</a></li>     <!-- 3.1 Ekubo -->
-        <li><a href="#methods-1">Methods of Computing Price</a></li>                 <!-- 3.2 Methods-1 -->
-        <li><a href="#methods-2">Methods-2</a></li>                 <!-- 3.2 Methods-2 -->
+        <li><a href="#data-structure">Data Structure</a></li>    <!-- 3.1 Data Structure-->
+        <li><a href="#data-overview">Data Overview</a></li>      <!-- 3.2 Data Overview-->
+      </ul>
+    </li>
+    <li>
+      <a href="#methods">Methods</a>                                              <!-- 4. Methods -->
+      <ul>
+        <li><a href="#methods-1">Methods of Computing Aggregation Dataset</a></li>    <!-- 4.1 Methods-1 -->
+        <li><a href="#methods-2">Methods-2</a></li>                                   <!-- 4.2 Methods-2 -->
       </ul>
     </li>
     <li>
@@ -62,29 +68,26 @@
 ## 1. About The Project
 The goal is to analyze the market depth of `Ekubo Protocol (v3)`[[1](https://docs.ekubo.org)] and provide profit and loss (PnL) calculation. The Ekuubo Protocol is an  automated market maker (AMM) designed for `Starknet`[[2](https://www.starknet.io/en/learn/what-is-starknet)], which is a layer 2 network on Ethereum providing a decentralized platform. Its unique features include concentrated liquidity and an extensible, gas-efficient architecture.
 
-The deliverable results of this project include 
+The targeted tasks of this project consist of two parts. First, providing market depth for the Ekubo Protocol for STRK/ETH, STRK/USDC, ETH/USDC, and USDC/USDT pools. Second, calculating the Profit and Loss (PnL) for a set of hypothetical positions held by the most profitable liquidity providers.
+
+The deliverable results should encompass a comprehensive report delineating the methodology, findings, and recommendations. Utilizing data visualizations and code in Jupyter Notebook to bolster the analysis is essential.
 
 Project Link: [https://github.com/rkevinchao/blockchain-data-analysis](https://github.com/rkevinchao/blockchain-data-analysis)
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <a name="summary"></a>
 ## 2. Summary
-Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `github_username`, `repo_name`, `twitter_handle`, `linkedin_username`, `email_client`, `email`, `project_title`, `project_description`
+Here is the summary of this report. Will update in the last stage.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 <!-- GETTING STARTED -->
-<a name="data-methods"></a>
-## 3. Data and Methods
-
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 <a name="ekubo-dataset"></a>
-### 3.1 The Ekubo Dataset
+## 3. Ekubo Dataset
+<a name="data-structure"></a>
+### 3.1 Data Structure
+The Ekubo Protocol dataset is stored in a Parquet file (not an open dataset) and 
 
 * `BLOCK_NUMBER`: The block when the transaction occurred
 * `BLOCK_TIMESTAMP`: The timestamp of the block
@@ -116,8 +119,40 @@ This is an example of how to list things you need to use the software and how to
   ```
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<a name="methods-1"></a>
-### 3.2 Methods of Computing Price
+<a name="data-overview"></a>
+### 3.2 Data Overview
+
+```
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 3024741 entries, 0 to 3024740
+Data columns (total 22 columns):
+ #   Column              Dtype         
+---  ------              -----         
+ 0   BLOCK_NUMBER        object        
+ 1   BLOCK_TIMESTAMP     datetime64[ns]
+ 2   TX_HASH             object        
+ 3   TX_ID               object        
+ 4   POOL_ID             object        
+ 5   TOKEN0_ADDRESS      object        
+ 6   TOKEN1_ADDRESS      object        
+ 7   EVENT_NAME          object        
+ 8   FROM_ADDRESS        object        
+ 9   TO_ADDRESS          object        
+ 10  TOKEN0_RAW_AMOUNT   object        
+ 11  TOKEN0_DECIMALS     object        
+ 12  TOKEN0_REAL_AMOUNT  object        
+ 13  TOKEN1_RAW_AMOUNT   object        
+ 14  TOKEN1_DECIMALS     object        
+ 15  TOKEN1_REAL_AMOUNT  object        
+ 16  FEE_TIER            float32       
+ 17  LIQUIDITY_AMOUNT    object        
+ 18  LOWER_TICK          object        
+ 19  UPPER_TICK          object        
+ 20  SWAP_TICK           object        
+ 21  TICK_SPACING        object        
+dtypes: datetime64[ns](1), float32(1), object(20)
+memory usage: 496.2+ MB
+```
 
 1. Get a free API Key at [https://example.com](https://example.com)
 2. Clone the repo
@@ -136,14 +171,14 @@ This is an example of how to list things you need to use the software and how to
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-<a name="methods-2"></a>
-### 3.3 Methods of Computing YYY
+<a name="methods"></a>
+## 4. Methods
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- USAGE EXAMPLES -->
 <a name="market-depth-analysis"></a>
-## 4. Market Depth Analysis
+## 5. Market Depth Analysis
 
 Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
 
@@ -152,28 +187,28 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <a name="eth-usdc"></a>
-### 4.1 ETH/USDC
+### 5.1 ETH/USDC
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <a name="usdc-usdt"></a>
-### 4.2 USDC/USDT
+### 5.2 USDC/USDT
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <a name="strk-eth"></a>
-### 4.3 STRK/ETH
+### 5.3 STRK/ETH
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <a name="strk-usdc"></a>
-### 4.4 STRK/USDC
+### 5.4 STRK/USDC
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- ROADMAP -->
 <a name="pnl"></a>
-## 5. Profit and Loss (PnL) Calculations
+## 6. Profit and Loss (PnL) Calculations
 
 - [ ] Feature 1
 - [ ] Feature 2
@@ -185,19 +220,19 @@ See the [open issues](https://github.com/github_username/repo_name/issues) for a
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <a name="pnl-usdc-usdt"></a>
-### 5.1 STRK/USDC
+### 6.1 STRK/USDC
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <a name="pnl-strk-eth"></a>
-### 5.2 STRK/USDC
+### 6.2 STRK/USDC
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 <!-- CONTRIBUTING -->
 <a name="discussion-conclusion"></a>
-## 6. Discussion and Conclusion
+## 7. Discussion and Conclusion
 
 Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
@@ -214,7 +249,7 @@ Don't forget to give the project a star! Thanks again!
 
 
 <!-- ACKNOWLEDGMENTS -->
-## References
+## 8. References
 <a name="references"></a>
 
 * [[1](https://docs.ekubo.org)] https://docs.ekubo.org
