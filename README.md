@@ -197,7 +197,7 @@ Name: 100, dtype: object
 
 * Date range plot for each tag
 
-<img src="images/fig_01a_02_date_range_plot.png" alt="Bar Plot">
+<img src="images/fig_01a_02_date_range_plot.png" alt="Date Range Plot">
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
