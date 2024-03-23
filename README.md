@@ -191,8 +191,14 @@ Name: 100, dtype: object
 
 
 * EE
-* 
+
 <img src="images/fig_01a_01_bar_plot.png" alt="Bar Plot">
+
+
+* Date range plot for each tag
+
+<img src="images/fig_01a_02_date_range_plot.png" alt="Bar Plot">
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
