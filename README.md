@@ -121,7 +121,7 @@ The entire Ekubo Protocol dataset is stored in a Parquet file (which is not an o
 
 * <a href="https://github.com/rkevinchao/blockchain-data-analysis/blob/main/01a_dataset_overview.ipynb">01a\_dataset\_overview.ipynb</a>: This Jypyter Notebook includes codes to generate results shown in this session. 
 
-* An overview of the dataframe structure
+* An overview of the dataframe structure:
 
 `df.info()`
 
@@ -157,7 +157,7 @@ dtypes: datetime64[ns](1), float32(1), object(20)
 memory usage: 496.2+ MB
 ```
 
-* A quick view of the values in one randomly selected row
+* A quick view of the values in one randomly selected row:
 
 `df.iloc[100]`
 
@@ -187,6 +187,20 @@ TICK_SPACING                                                       1000
 Name: 100, dtype: object
 ```
 
+* SS
+
+
+* EE
+* 
+<img src="images/fig_01a_01_bar_plot.png" alt="Bar Plot">
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+<a name="methods"></a>
+## 4. Methods
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 
@@ -203,14 +217,6 @@ Name: 100, dtype: object
    ```js
    const API_KEY = 'ENTER YOUR API';
    ```
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-<a name="methods"></a>
-## 4. Methods
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- USAGE EXAMPLES -->
 <a name="market-depth-analysis"></a>
