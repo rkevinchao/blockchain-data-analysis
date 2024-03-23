@@ -177,34 +177,34 @@ df.iloc[100]
 ```
 
 ```
-LOCK_NUMBER                                                     175185
-BLOCK_TIMESTAMP                                     2023-08-27 10:12:10
-TX_HASH               0x0630d24c60c8247bbc1b2d7afb9b7a41e4b74d6f09e1...
-TX_ID                                               5461067_0_175185_74
+BLOCK_NUMBER                                                     175738
+BLOCK_TIMESTAMP                                     2023-08-27 14:57:12
+TX_HASH               0x07c98ed05759e1b0047bf8eafa41e30065a6985f8d88...
+TX_ID                                              5461067_0_175738_163
 POOL_ID               0x00000005dd3d2f4429af886cd1a3b08289dbcea99a29...
-TOKEN0_ADDRESS        0x053c91253bc9682c04929ca02ed00b3e423f6710d2ee...
-TOKEN1_ADDRESS        0x068f5c6a61780768455de69077e07e89787839bf8166...
+TOKEN0_ADDRESS        0x049d36570d4e46f48e99674bd3fcc84644ddd6b96f7c...
+TOKEN1_ADDRESS        0x053c91253bc9682c04929ca02ed00b3e423f6710d2ee...
 EVENT_NAME                                                         Mint
-FROM_ADDRESS          0x052df7acdfd3174241fa6bd5e1b7192cd133f8fc30a2...
+FROM_ADDRESS          0x036fd071faaead90780ee4161eab85a9fc2598e8e8e6...
 TO_ADDRESS            0x00000005dd3d2f4429af886cd1a3b08289dbcea99a29...
-TOKEN0_RAW_AMOUNT                                          -250000000.0
-TOKEN0_DECIMALS                                                       6
-TOKEN0_REAL_AMOUNT                                               -250.0
-TOKEN1_RAW_AMOUNT                                          -257138683.0
+TOKEN0_RAW_AMOUNT                                  -11825645732386756.0
+TOKEN0_DECIMALS                                                      18
+TOKEN0_REAL_AMOUNT                                            -0.011826
+TOKEN1_RAW_AMOUNT                                           -20000000.0
 TOKEN1_DECIMALS                                                       6
-TOKEN1_REAL_AMOUNT                                          -257.138683
+TOKEN1_REAL_AMOUNT                                                -20.0
 FEE_TIER                                                          0.003
-LIQUIDITY_AMOUNT                                           4367089524.0
-LOWER_TICK                                                    -125622.0
-UPPER_TICK                                                     113658.0
+LIQUIDITY_AMOUNT                                        8376507117481.0
+LOWER_TICK                                                  -20350764.0
+UPPER_TICK                                                  -20111484.0
 SWAP_TICK                                                           0.0
 TICK_SPACING                                                       5982
-datetime                                            2023-08-27 10:12:10
-timestamp                                                    1693131130
-Token0_name                                                        USDC
-Token1_name                                                        USDT
-tag                                                      USDC_USDT_Mint
-Name: 14525, dtype: object
+datetime                                            2023-08-27 14:57:12
+timestamp                                                    1693148232
+Token0_name                                                         ETH
+Token1_name                                                        USDC
+tag                                                       ETH_USDC_Mint
+Name: 110352, dtype: object
 ```
 
 * Plot % of rows for each tag among the whole dataset: 
