@@ -84,8 +84,9 @@ Here is the summary of this report. Will update in the last stage.
 
 <!-- GETTING STARTED -->
 <a name="ekubo-dataset"></a>
-## 3. Ekubo Dataset
 <a name="data-structure"></a>
+## 3. Ekubo Dataset
+
 ### 3.1 Data Structure
 The entire Ekubo Protocol dataset is stored in a Parquet file (which is not an open dataset), containing various data such as transaction details, liquidity events, and price movements. Below is a detailed explanation for each column.
 
@@ -117,7 +118,11 @@ The entire Ekubo Protocol dataset is stored in a Parquet file (which is not an o
 <a name="data-overview"></a>
 ### 3.2 Data Overview
 
-<a href="https://github.com/rkevinchao/blockchain-data-analysis/blob/main/01a_dataset_overview.ipynb">01a\_dataset\_overview.ipynb</a>
+* <a href="https://github.com/rkevinchao/blockchain-data-analysis/blob/main/01a_dataset_overview.ipynb">01a\_dataset\_overview.ipynb</a>: This Jypyter Notebook includes codes to generate results shown in this session. 
+
+* An overview of the dataframe structure
+
+`df.info()`
 
 ```
 <class 'pandas.core.frame.DataFrame'>
@@ -150,6 +155,39 @@ Data columns (total 22 columns):
 dtypes: datetime64[ns](1), float32(1), object(20)
 memory usage: 496.2+ MB
 ```
+
+* A quick view of the values in one randomly selected row
+
+`df.iloc[100]`
+
+```
+BLOCK_NUMBER                                                     317634
+BLOCK_TIMESTAMP                                     2023-10-13 03:18:38
+TX_HASH               0x008dcce8b4d0814d1655d294aa9a6ba898ece028e317...
+TX_ID                                              5461067_0_317634_132
+POOL_ID               0x00000005dd3d2f4429af886cd1a3b08289dbcea99a29...
+TOKEN0_ADDRESS        0x053c91253bc9682c04929ca02ed00b3e423f6710d2ee...
+TOKEN1_ADDRESS        0x068f5c6a61780768455de69077e07e89787839bf8166...
+EVENT_NAME                                                         Mint
+FROM_ADDRESS          0x057ddd233caca940b84ea0c51c3905eb9ca3f4ea31bc...
+TO_ADDRESS            0x00000005dd3d2f4429af886cd1a3b08289dbcea99a29...
+TOKEN0_RAW_AMOUNT                                            -279110619
+TOKEN0_DECIMALS                                                       6
+TOKEN0_REAL_AMOUNT                  -279.110618999999985589965945109725
+TOKEN1_RAW_AMOUNT                                            -279094071
+TOKEN1_DECIMALS                                                       6
+TOKEN1_REAL_AMOUNT                  -279.094070999999985360773280262947
+FEE_TIER                                                         0.0005
+LIQUIDITY_AMOUNT                                            28050032209
+LOWER_TICK                                                       -20000
+UPPER_TICK                                                        20000
+SWAP_TICK                                                             0
+TICK_SPACING                                                       1000
+Name: 100, dtype: object
+```
+
+
+
 
 1. Get a free API Key at [https://example.com](https://example.com)
 2. Clone the repo
