@@ -68,9 +68,9 @@
 ## 1. About The Project
 The goal is to analyze the market depth of `Ekubo Protocol (v3)`[[1](https://docs.ekubo.org)] and provide profit and loss (PnL) calculation. The Ekuubo Protocol is an  automated market maker (AMM) designed for `Starknet`[[2](https://www.starknet.io/en/learn/what-is-starknet)], which is a layer 2 network on Ethereum providing a decentralized platform. Its unique features include concentrated liquidity and an extensible, gas-efficient architecture.
 
-The targeted tasks of this project consist of two parts. First, providing market depth for the Ekubo Protocol for STRK/ETH, STRK/USDC, ETH/USDC, and USDC/USDT pools. Second, calculating the Profit and Loss (PnL) for a set of hypothetical positions held by the most profitable liquidity providers.
+The targeted tasks consist of two parts: (1) Providing market depth for the Ekubo Protocol for STRK/ETH, STRK/USDC, ETH/USDC, and USDC/USDT pools. (2) Calculating the Profit and Loss (PnL) for a set of hypothetical positions held by the most profitable liquidity providers.
 
-The deliverable results should encompass a comprehensive report delineating the methodology, findings, and recommendations. Utilizing data visualizations and code in Jupyter Notebook to bolster the analysis is essential.
+The deliverable results include a comprehensive report that details the methodology, findings, and recommendations. This report would be supported by data visualizations and code within a Jupyter Notebook to enhance the analysis.
 
 Project Link: [https://github.com/rkevinchao/blockchain-data-analysis](https://github.com/rkevinchao/blockchain-data-analysis)
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
