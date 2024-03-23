@@ -121,7 +121,13 @@ The entire Ekubo Protocol dataset is stored in a Parquet file (which is not an o
 
 * <a href="https://github.com/rkevinchao/blockchain-data-analysis/blob/main/01a_dataset_overview.ipynb">01a\_dataset\_overview.ipynb</a>: This Jypyter Notebook includes codes to generate results shown in this session. 
 
-* An overview of the dataframe structure:
+* An updated dataframe table:
+	* On the top of the raw dataframe, I added below additioanl columns to have a better overview on the dataset:
+		* `Token0_name`: based on inforamtion from `TOKEN0_ADDRESS`
+		* `Token1_name`: based on inforamtion from `TOKEN1_ADDRESS`
+		* `tag`: for classify each trading-pair-type, for example, `STRK_ETH_Swap`
+
+* An overview of the updated dataframe structure:
 
 ```
 df.info()
@@ -129,11 +135,11 @@ df.info()
 
 ```
 <class 'pandas.core.frame.DataFrame'>
-RangeIndex: 3024741 entries, 0 to 3024740
-Data columns (total 22 columns):
+Int64Index: 3024741 entries, 71486 to 1779938
+Data columns (total 27 columns):
  #   Column              Dtype         
 ---  ------              -----         
- 0   BLOCK_NUMBER        object        
+ 0   BLOCK_NUMBER        int64         
  1   BLOCK_TIMESTAMP     datetime64[ns]
  2   TX_HASH             object        
  3   TX_ID               object        
@@ -143,21 +149,25 @@ Data columns (total 22 columns):
  7   EVENT_NAME          object        
  8   FROM_ADDRESS        object        
  9   TO_ADDRESS          object        
- 10  TOKEN0_RAW_AMOUNT   object        
- 11  TOKEN0_DECIMALS     object        
- 12  TOKEN0_REAL_AMOUNT  object        
- 13  TOKEN1_RAW_AMOUNT   object        
- 14  TOKEN1_DECIMALS     object        
- 15  TOKEN1_REAL_AMOUNT  object        
- 16  FEE_TIER            float32       
- 17  LIQUIDITY_AMOUNT    object        
- 18  LOWER_TICK          object        
- 19  UPPER_TICK          object        
- 20  SWAP_TICK           object        
- 21  TICK_SPACING        object        
-dtypes: datetime64[ns](1), float32(1), object(20)
-memory usage: 496.2+ MB
-```
+ 10  TOKEN0_RAW_AMOUNT   float64       
+ 11  TOKEN0_DECIMALS     int64         
+ 12  TOKEN0_REAL_AMOUNT  float64       
+ 13  TOKEN1_RAW_AMOUNT   float64       
+ 14  TOKEN1_DECIMALS     int64         
+ 15  TOKEN1_REAL_AMOUNT  float64       
+ 16  FEE_TIER            float64       
+ 17  LIQUIDITY_AMOUNT    float64       
+ 18  LOWER_TICK          float64       
+ 19  UPPER_TICK          float64       
+ 20  SWAP_TICK           float64       
+ 21  TICK_SPACING        int64         
+ 22  datetime            datetime64[ns]
+ 23  timestamp           int64         
+ 24  Token0_name         object        
+ 25  Token1_name         object        
+ 26  tag                 object        
+dtypes: datetime64[ns](2), float64(9), int64(5), object(11)
+memory usage: 646.2+ MB```
 
 * A quick view of the values in one randomly selected row:
 
@@ -166,34 +176,38 @@ df.iloc[100]
 ```
 
 ```
-BLOCK_NUMBER                                                     317634
-BLOCK_TIMESTAMP                                     2023-10-13 03:18:38
-TX_HASH               0x008dcce8b4d0814d1655d294aa9a6ba898ece028e317...
-TX_ID                                              5461067_0_317634_132
+LOCK_NUMBER                                                     175185
+BLOCK_TIMESTAMP                                     2023-08-27 10:12:10
+TX_HASH               0x0630d24c60c8247bbc1b2d7afb9b7a41e4b74d6f09e1...
+TX_ID                                               5461067_0_175185_74
 POOL_ID               0x00000005dd3d2f4429af886cd1a3b08289dbcea99a29...
 TOKEN0_ADDRESS        0x053c91253bc9682c04929ca02ed00b3e423f6710d2ee...
 TOKEN1_ADDRESS        0x068f5c6a61780768455de69077e07e89787839bf8166...
 EVENT_NAME                                                         Mint
-FROM_ADDRESS          0x057ddd233caca940b84ea0c51c3905eb9ca3f4ea31bc...
+FROM_ADDRESS          0x052df7acdfd3174241fa6bd5e1b7192cd133f8fc30a2...
 TO_ADDRESS            0x00000005dd3d2f4429af886cd1a3b08289dbcea99a29...
-TOKEN0_RAW_AMOUNT                                            -279110619
+TOKEN0_RAW_AMOUNT                                          -250000000.0
 TOKEN0_DECIMALS                                                       6
-TOKEN0_REAL_AMOUNT                  -279.110618999999985589965945109725
-TOKEN1_RAW_AMOUNT                                            -279094071
+TOKEN0_REAL_AMOUNT                                               -250.0
+TOKEN1_RAW_AMOUNT                                          -257138683.0
 TOKEN1_DECIMALS                                                       6
-TOKEN1_REAL_AMOUNT                  -279.094070999999985360773280262947
-FEE_TIER                                                         0.0005
-LIQUIDITY_AMOUNT                                            28050032209
-LOWER_TICK                                                       -20000
-UPPER_TICK                                                        20000
-SWAP_TICK                                                             0
-TICK_SPACING                                                       1000
-Name: 100, dtype: object
+TOKEN1_REAL_AMOUNT                                          -257.138683
+FEE_TIER                                                          0.003
+LIQUIDITY_AMOUNT                                           4367089524.0
+LOWER_TICK                                                    -125622.0
+UPPER_TICK                                                     113658.0
+SWAP_TICK                                                           0.0
+TICK_SPACING                                                       5982
+datetime                                            2023-08-27 10:12:10
+timestamp                                                    1693131130
+Token0_name                                                        USDC
+Token1_name                                                        USDT
+tag                                                      USDC_USDT_Mint
+Name: 14525, dtype: object
 ```
 
 * Plot % of rows for each tag among the whole dataset: 
 <img src="images/fig_01a_01_bar_plot.png" alt="Bar Plot">
-
 
 * Date range plot for each tag:
 <img src="images/fig_01a_02_date_range_plot.png" alt="Date Range Plot">
