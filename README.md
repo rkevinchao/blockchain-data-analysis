@@ -35,10 +35,10 @@
       </ul>
     </li>
     <li>
-      <a href="#methods">Methods</a>                                              <!-- 4. Methods -->
+      <a href="#methods">Methods</a>                                                      <!-- 4. Methods -->
       <ul>
-        <li><a href="#methods-1">Methods of Computing Aggregation Dataset</a></li>    <!-- 4.1 Methods-1 -->
-        <li><a href="#methods-2">Methods-2</a></li>                                   <!-- 4.2 Methods-2 -->
+        <li><a href="#method-1">Compute Aggregaed Dataset</a></li>                          <!-- 4.1 Methods-1 -->
+        <li><a href="#method-2">Comparison of Daily Aggregated Data for ETH/USDC</a></li>   <!-- 4.2 Methods-2 -->
       </ul>
     </li>
     <li>
@@ -119,7 +119,7 @@ The entire Ekubo Protocol dataset is stored in a Parquet file (which is not an o
 <a name="dataset-overview"></a>
 ### 3.2 Dataset Overview
 
-* <a href="https://github.com/rkevinchao/blockchain-data-analysis/blob/main/01a_dataset_overview.ipynb">01a\_dataset\_overview.ipynb</a>: This Jypyter Notebook includes codes to generate results shown in this session. 
+* <a href="https://github.com/rkevinchao/blockchain-data-analysis/blob/main/01a_dataset_overview.ipynb">01a\_dataset\_overview.ipynb</a>: This Jupyter Notebook includes the code used to generate the results presented in Session 3.2.
 
 * An updated dataframe table:
 	* On the top of the raw dataframe, I added below additioanl columns to have a better overview on the dataset:
@@ -240,24 +240,25 @@ Name: 110352, dtype: object
 
 <a name="methods"></a>
 ## 4. Methods
+* <a href="https://github.com/rkevinchao/blockchain-data-analysis/blob/main/01b_compute_aggregations_table.ipynb">01b\_compute\_aggregations\_table.ipynb</a>: This Jupyter Notebook includes the code used to generate the results presented in *Session 4*. 
+
+In this sesson, I first present the methods I used to compute `daily` and `hourly` aggregated tables for the Ekubo Protocol dataset in *Session 4.1*. The computation includes (1) the aggregated token price for each trading pair and (2) number of tokens in the pool for a given day. 
+
+Next, I compared the daily aggregated ETH/USDC price with public available ETH/USD price to confirm the reliability of the aggregated tabels from this study.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+<a name="method-1"></a>
+### 4.1 Compute Aggregaed Dataset
 
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
-   ```sh
-   git clone https://github.com/github_username/repo_name.git
-   ```
-3. Install NPM packages
-   ```sh
-   npm install
-   ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
-   ```
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<a name="method-2"></a>
+### 4.2 Comparison of Daily Aggregated Data for ETH/USDC 
+
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- USAGE EXAMPLES -->
 <a name="market-depth-analysis"></a>
