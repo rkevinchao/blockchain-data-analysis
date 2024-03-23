@@ -215,17 +215,17 @@ Name: 110352, dtype: object
 
 * In the Ekubo dataset, there are five types of trading pair and three event types: 
 	1. STRK/ETH (Mint, Burn, and Swap)
-	- STRK/USDC (Mint, Burn, and Swap)
-	- STRK/USDT (Mint, Burn, and Swap)
-	- ETH/USDC (Mint, Burn, and Swap)
-	- USDC/USDT (Mint, Burn, and Swap)
+	2. STRK/USDC (Mint, Burn, and Swap)
+	3. STRK/USDT (Mint, Burn, and Swap)
+	4. ETH/USDC (Mint, Burn, and Swap)
+	5. USDC/USDT (Mint, Burn, and Swap)
 
 * Top five trading pair events:
 	1. ETH/USDC-Swap (54.0%)
-	- USDC/USDT-Swap (24.6%)
-	- ETH/USDC-Mint (7.61%)
-	- STRK/ETH-Swap (4.38%)
-	- ETH/USDC-Burn (3.82%)
+	2. USDC/USDT-Swap (24.6%)
+	3. ETH/USDC-Mint (7.61%)
+	4. STRK/ETH-Swap (4.38%)
+	5. ETH/USDC-Burn (3.82%)
  
 * Date range for each trading pair:
 	- The whole dataset: `2023-08-21 18:06:57` to `2024-02-25 03:57:43`
@@ -234,13 +234,6 @@ Name: 110352, dtype: object
 	- STRK/ETH pools: `2024-02-08 12:27:13` to `2024-02-25 03:57:26`
 	- STRK/USDC pools: `024-02-11 11:21:18` to `2024-02-25 03:57:26`
 	- STRK/USDT pools: `2024-02-19 16:26:11` to `2024-02-25 03:36:21`
-
-The whole dataset: 
-ETH_USDC: 
-USDC_USDT: 
-STRK_ETH: 
-STRK_USDC: 2
-STRK_USDT: 
 
    
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
