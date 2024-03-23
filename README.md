@@ -87,7 +87,7 @@ Here is the summary of this report. Will update in the last stage.
 ## 3. Ekubo Dataset
 <a name="data-structure"></a>
 ### 3.1 Data Structure
-The Ekubo Protocol dataset is stored in a Parquet file (not an open dataset) and 
+The entire Ekubo Protocol dataset is stored in a Parquet file (which is not an open dataset), containing various data such as transaction details, liquidity events, and price movements. Below is a detailed explanation for each column.
 
 * `BLOCK_NUMBER`: The block when the transaction occurred
 * `BLOCK_TIMESTAMP`: The timestamp of the block
@@ -112,15 +112,12 @@ The Ekubo Protocol dataset is stored in a Parquet file (not an open dataset) and
 * `SWAP_TICK`: The final price tick reached after a Swap (set to 0 for all Mints and Burns)
 * `TICK_SPACING`: Defines the intervals on which users are allowed to add or subtract liquidity in the given pool (not relevant to this assignment)
 
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <a name="data-overview"></a>
 ### 3.2 Data Overview
+
+<a href="https://github.com/rkevinchao/blockchain-data-analysis/blob/main/01a_dataset_overview.ipynb">01a\_dataset\_overview.ipynb</a>
 
 ```
 <class 'pandas.core.frame.DataFrame'>
