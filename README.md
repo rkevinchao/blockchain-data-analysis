@@ -7,7 +7,7 @@
     Kevin Chao, Ph.D.
   </p>
   <p align="center">    
-    LinkedIn:
+    LinkedIn: 
     	<a href="https://www.linkedin.com/in/kevin-chao-com/">https://www.linkedin.com/in/kevin-chao-com/</a>
     <br /> Email: 
     	<a href="mailto:kevinchao@gmail.com">kevinchao@gmail.com</a>
