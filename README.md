@@ -30,8 +30,8 @@
     <li>
       <a href="#ekubo-dataset">Ekubo Dataset</a>              <!-- 3. Ekubo DataSet -->
       <ul>
-        <li><a href="#data-structure">Data Structure</a></li>    <!-- 3.1 Data Structure-->
-        <li><a href="#data-overview">Data Overview</a></li>      <!-- 3.2 Data Overview-->
+        <li><a href="#dataset-structure">Dataset Structure</a></li>    <!-- 3.1 Dataset Structure-->
+        <li><a href="#dataset-overview">Dataset Overview</a></li>      <!-- 3.2 Dataset Overview-->
       </ul>
     </li>
     <li>
@@ -42,22 +42,22 @@
       </ul>
     </li>
     <li>
-      <a href="#market-depth-analysis">Market Depth Analysis</a>  <!-- 4. Market Depth -->
+      <a href="#market-depth-analysis">Market Depth Analysis</a>  <!-- 5. Market Depth -->
       <ul>
-        <li><a href="#eth-usdc">ETH/USDC</a></li>    <!--4.1 ETH/USDC-->
-        <li><a href="#usdc-usdt"> USDC/USDT</a></li> <!--4.2 USDC/USDT-->
-        <li><a href="#strk-eth">STRK/ETH</a></li>    <!--4.3 STRK/USDC-->
-        <li><a href="#strk-usdc">STRK/USDC</a></li>  <!--4.4 STRK/USDC-->
+        <li><a href="#eth-usdc">ETH/USDC</a></li>    <!--5.1 ETH/USDC-->
+        <li><a href="#usdc-usdt"> USDC/USDT</a></li> <!--5.2 USDC/USDT-->
+        <li><a href="#strk-eth">STRK/ETH</a></li>    <!--5.3 STRK/USDC-->
+        <li><a href="#strk-usdc">STRK/USDC</a></li>  <!--5.4 STRK/USDC-->
       </ul>
     </li>    
     <li>
-    	<a href="#pnl">Profit and Loss (PnL) Calculations</a></li>  <!--5. PnL-->
+    	<a href="#pnl">Profit and Loss (PnL) Calculations</a></li>  <!--6. PnL-->
        <ul>
-        <li><a href="#pnl-usdc-usdt">ETH/USDC</a></li>                 <!--5.1 USDC/USDT -->
-        <li><a href="#pnl-strk-eth">STRK/ETH and STRK/USDC</a></li>    <!--5.2 STRK/ETH -->
+        <li><a href="#pnl-usdc-usdt">ETH/USDC</a></li>                 <!--6.1 USDC/USDT -->
+        <li><a href="#pnl-strk-eth">STRK/ETH and STRK/USDC</a></li>    <!--6.2 STRK/ETH -->
        </ul>
-    <li><a href="#discussion-conclusion">Discussion and Conclusion</a></li>   <!--6. Discussion and Conclusion-->
-    <li><a href="#references">References</a></li>                             <!--7. References-->
+    <li><a href="#discussion-conclusion">Discussion and Conclusion</a></li>   <!--7. Discussion and Conclusion-->
+    <li><a href="#references">References</a></li>                             <!--8. References-->
   </ol>
 </details>
 
@@ -80,14 +80,15 @@ Project Link: [https://github.com/rkevinchao/blockchain-data-analysis](https://g
 Here is the summary of this report. Will update in the last stage.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-<a name="ekubo-dataset"></a>
+
 
 <!-- GETTING STARTED -->
-<a name="data-structure"></a>
-
+<a name="ekubo-dataset"></a>
 ## 3. Ekubo Dataset
 
-### 3.1 Data Structure
+<a name="dataset-structure"></a>
+### 3.1 Dataset Structure
+
 The entire Ekubo Protocol dataset is stored in a Parquet file (which is not an open dataset), containing various data such as transaction details, liquidity events, and price movements. Below is a detailed explanation for each column.
 
 * `BLOCK_NUMBER`: The block when the transaction occurred
@@ -115,8 +116,8 @@ The entire Ekubo Protocol dataset is stored in a Parquet file (which is not an o
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<a name="data-overview"></a>
-### 3.2 Data Overview
+<a name="dataset-overview"></a>
+### 3.2 Dataset Overview
 
 * <a href="https://github.com/rkevinchao/blockchain-data-analysis/blob/main/01a_dataset_overview.ipynb">01a\_dataset\_overview.ipynb</a>: This Jypyter Notebook includes codes to generate results shown in this session. 
 
@@ -191,17 +192,43 @@ Name: 100, dtype: object
 ```
 
 * Plot % of rows for each tag among the whole dataset: 
-
 <img src="images/fig_01a_01_bar_plot.png" alt="Bar Plot">
 
 
-* Date range plot for each tag
-
+* Date range plot for each tag:
 <img src="images/fig_01a_02_date_range_plot.png" alt="Date Range Plot">
 
+* In the Ekubo dataset, there are five types of trading pair and three event types: 
+	1. STRK/ETH (Mint, Burn, and Swap)
+	- STRK/USDC (Mint, Burn, and Swap)
+	- STRK/USDT (Mint, Burn, and Swap)
+	- ETH/USDC (Mint, Burn, and Swap)
+	- USDC/USDT (Mint, Burn, and Swap)
 
+* Top five trading pair events:
+	1. ETH/USDC-Swap (54.0%)
+	- USDC/USDT-Swap (24.6%)
+	- ETH/USDC-Mint (7.61%)
+	- STRK/ETH-Swap (4.38%)
+	- ETH/USDC-Burn (3.82%)
+ 
+* Date range for each trading pair:
+	- The whole dataset: `2023-08-21 18:06:57` to `2024-02-25 03:57:43`
+	- ETH/USDC pools: `2023-08-21 18:06:57` to `2024-02-25 03:57:43`
+	- USDC/USDT pools: `2023-08-25 17:26:00` to `2024-02-25 03:57:26`
+	- STRK/ETH pools: `2024-02-08 12:27:13` to `2024-02-25 03:57:26`
+	- STRK/USDC pools: `024-02-11 11:21:18` to `2024-02-25 03:57:26`
+	- STRK/USDT pools: `2024-02-19 16:26:11` to `2024-02-25 03:36:21`
+
+The whole dataset: 
+ETH_USDC: 
+USDC_USDT: 
+STRK_ETH: 
+STRK_USDC: 2
+STRK_USDT: 
+
+   
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 <a name="methods"></a>
 ## 4. Methods
