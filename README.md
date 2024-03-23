@@ -14,7 +14,7 @@
     <br /> GitHub:
     	<a href="https://github.com/rkevinchao">https://github.com/rkevinchao</a>
     <br /> Website:
-    	<a href="https://kevinchao.com/">https://kevinchao.com/</a>
+    	<a href="https://kevinchao.com">https://kevinchao.com</a>
     <br />
   </p>
 </div>
