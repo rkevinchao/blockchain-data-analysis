@@ -123,7 +123,9 @@ The entire Ekubo Protocol dataset is stored in a Parquet file (which is not an o
 
 * An overview of the dataframe structure:
 
-`df.info()`
+```
+df.info()
+```
 
 ```
 <class 'pandas.core.frame.DataFrame'>
@@ -159,7 +161,9 @@ memory usage: 496.2+ MB
 
 * A quick view of the values in one randomly selected row:
 
-`df.iloc[100]`
+```
+df.iloc[100]
+```
 
 ```
 BLOCK_NUMBER                                                     317634
@@ -187,10 +191,7 @@ TICK_SPACING                                                       1000
 Name: 100, dtype: object
 ```
 
-* SS
-
-
-* EE
+* Plot % of rows for each tag among the whole dataset: 
 
 <img src="images/fig_01a_01_bar_plot.png" alt="Bar Plot">
 
