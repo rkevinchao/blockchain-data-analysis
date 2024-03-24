@@ -349,8 +349,8 @@ liquidity_daily_cum_sum_mint         9630181268773528.0
 liquidity_daily_cum_sum_burn         -324302866910177.0
 liquidity_daily_cum_net_mint_burn    9305878401863352.0
 token0_daily_price_median_swap              1629.834986
-token0_daily_price_min_swap                 1645.132325
-token0_daily_price_max_swap                 1292.546316
+token0_daily_price_min_swap                 1292.546316
+token0_daily_price_max_swap                 1645.132325
 token0_daily_price_std_swap                   19.663286
 token0_daily_amount_buy_swap                  11.273301
 token0_daily_amount_sell_swap                 -7.499795
