@@ -366,7 +366,7 @@ Name: 22, dtype: object
 ```
 
 * Plot ETH price comparison between the aggregated ETH/USDC price from this study versus the ETH/USD price download with `pycoingecko`: 
-<img src="images/fig_02a_01_ETH_price_comparison.png" alt="Bar Plot">
+<img src="images/fig_01b_01_ETH_price_comparison.png" alt="Bar Plot">
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
