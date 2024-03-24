@@ -264,6 +264,61 @@ Next, I compared the daily aggregated ETH/USDC price with public available ETH/U
 
 <a name="method-1"></a>
 ### 4.1 Compute Aggregaed Dataset
+* The aggregated price for trading pair tokens, such as ETH/USDC, is computed with the ***median*** value within a time range (e.g., in a day or in an hour) from the token ratio (`TOKEN1/TOKEN0`) of the token amount. 
+
+	* To compute price of trading pair:
+		* `RATIO_TOKEN1_TOKEN0 = TOKEN1_REAL_AMOUNT / TOKEN0_REAL_AMOUNT`
+		* `Pair_Price = median(RATIO_TOKEN1_TOKEN0)`
+
+
+
+
+The outputs of the aggregated dataset include the following CSV files:
+
+* Daily Aggregated Datasets:
+	* df\_agg\_daily\_all.csv
+		* df\_agg\_daily\_STRK\_USDC.csv 
+		* df\_agg\_daily\_STRK\_USDT.csv
+		* df\_agg\_daily\_STRK\_ETH.csv
+		* df\_agg\_daily\_ETH\_USDC.csv
+		* df\_agg\_daily\_USDC\_USDT.csv
+* Hourly Aggregated Datasets: 
+	* df\_agg\_hourly\_all.csv
+		* df\_agg\_hourly\_STRK\_USDC.csv
+		* df\_agg\_hourly\_STRK\_USDT.csv
+		* df\_agg\_hourly\_STRK\_ETH.csv
+
+Below are the columns included in the aggregated csv files:
+
+* `tag`: ESTRK\_ETH, STRK\_USDC, STRK\_USDT, ETH\_USDC, or USDC\_USDT.
+* `token0`: STRK, ETH, or USDC
+* `token1`: STRK, ETH, or USDT
+* `date`: Beginning Date and Time of that day or hour
+* `timestamp`: timestamp 
+* `token0_daily_price_median_mint`: median price of token0/token1 for mint event
+* `token0_daily_amount_mint`: count of token0 for mint
+* `token0_daily_price_median_burn`: median price of token0/token1 for burn event
+* `token0_daily_amount_burn`: count of token0 for burn
+* `token0_daily_amount_net_mint_burn`: net amount of token0 by adding mint and burn
+* `liquidity_daily_sum_mint`: sum of liquidity for mint
+* `liquidity_daily_sum_burn`: sum of liquidity for burn
+* `liquidity_daily_net_mint_burn`: total net liquidity by adding mint and burn
+* `liquidity_daily_cum_sum_mint`: 
+* `liquidity_daily_cum_sum_burn`:
+* `token0_daily_price_median_swap`: median price of token0/token1 for swap event
+* `token0_daily_price_min_swap`: min price for swap event
+* `token0_daily_price_max_swap`: max price for swap event
+* `token0_daily_price_std_swap`: std for swap event
+* `token0_daily_amount_buy_swap`: total buying amount of token for swap event
+* `token0_daily_amount_sell_swap`: total selling amount of token for swap even
+* `token0_daily_amount_net_swap`: total net amount of token by adding buy and sell
+* `token0_daily_amount_cum_buy_swap`: cumulative buy amount of token by adding all buy amount before the current day or hour
+* `token0_daily_amount_cum_sell_swap`: cumulative sell amount of token by adding all buy amount before the current day or hour
+* `token0_daily_amount_cum_net_swap`: cumulative net amount of token by adding cumulative buy and sell amounts
+* `total_events_daily_mint`: total mint events used to compoute the aggregated results
+* `total_events_daily_burn`: total burn events used to compoute the aggregated results
+* `total_events_daily_swap`: total swap events used to compoute the aggregated results
+* `total_events_daily`: total events (mint, burn, and swap) in a day or hour
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -271,6 +326,47 @@ Next, I compared the daily aggregated ETH/USDC price with public available ETH/U
 <a name="method-2"></a>
 ### 4.2 Comparison of Daily Aggregated Data for ETH/USDC 
 
+* Example outputs of a row for the ETH/USDC file:  
+```
+df_ETH_USDC.iloc[22]
+```
+
+```
+tag                                            ETH_USDC
+token0                                              ETH
+token1                                             USDC
+date                                         2023-09-14
+timestamp                                    1694649600
+token0_daily_price_median_mint              1689.320632
+token0_daily_amount_mint                     -12.798675
+token0_daily_price_median_burn              1689.320586
+token0_daily_amount_burn                       0.456841
+token0_daily_amount_net_mint_burn            -12.341834
+liquidity_daily_sum_mint             9630181268773528.0
+liquidity_daily_sum_burn             -324302866910177.0
+liquidity_daily_net_mint_burn        9305878401863352.0
+liquidity_daily_cum_sum_mint         9630181268773528.0
+liquidity_daily_cum_sum_burn         -324302866910177.0
+liquidity_daily_cum_net_mint_burn                   NaN
+token0_daily_price_median_swap              1629.834986
+token0_daily_price_min_swap                 1645.132325
+token0_daily_price_max_swap                 1292.546316
+token0_daily_price_std_swap                   19.663286
+token0_daily_amount_buy_swap                  11.273301
+token0_daily_amount_sell_swap                 -7.499795
+token0_daily_amount_net_swap                   3.773506
+token0_daily_amount_cum_buy_swap              11.273301
+token0_daily_amount_cum_sell_swap             -7.499795
+token0_daily_amount_cum_net_swap               3.773506
+total_events_daily_mint                              78
+total_events_daily_burn                              10
+total_events_daily_swap                             450
+total_events_daily                                  538
+Name: 22, dtype: object
+```
+
+* Plot ETH price comparison between the aggregated ETH/USDC price from this study versus the ETH/USD price download with `pycoingecko`: 
+<img src="images/fig_02a_01_ETH_price_comparison.png" alt="Bar Plot">
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
