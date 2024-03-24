@@ -77,7 +77,15 @@ Project Link: [https://github.com/rkevinchao/blockchain-data-analysis](https://g
 
 <a name="summary"></a>
 ## 2. Summary
-Here is the summary of this report. Will update in the last stage.
+Here is the summary of this report. Will update in the last.
+
+Recommandations to the Ebubo Protocol:
+
+1. r1
+2. r2
+3. r3
+4. r4
+5. r5
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
