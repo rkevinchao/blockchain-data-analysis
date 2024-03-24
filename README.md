@@ -269,8 +269,8 @@ Next, I compared the daily aggregated ETH/USDC price with public available ETH/U
 	* To compute price of trading pair:
 		* `RATIO_TOKEN1_TOKEN0 = TOKEN1_REAL_AMOUNT / TOKEN0_REAL_AMOUNT`
 		* `Pair_Price = median(RATIO_TOKEN1_TOKEN0)`
-
-
+	* To compute total token in the pool for a given day or hour:
+		* `amount_cumulative_buy_sell_swap`: compute total cumutive amount of token (net amount) by adding cumulative buy and cumulative sell tokens on and before a given day or hour.  
 
 
 The outputs of the aggregated dataset include the following CSV files:
@@ -347,13 +347,13 @@ liquidity_daily_sum_burn             -324302866910177.0
 liquidity_daily_net_mint_burn        9305878401863352.0
 liquidity_daily_cum_sum_mint         9630181268773528.0
 liquidity_daily_cum_sum_burn         -324302866910177.0
-liquidity_daily_cum_net_mint_burn                   NaN
+liquidity_daily_cum_net_mint_burn    9305878401863352.0
 token0_daily_price_median_swap              1629.834986
 token0_daily_price_min_swap                 1645.132325
 token0_daily_price_max_swap                 1292.546316
 token0_daily_price_std_swap                   19.663286
 token0_daily_amount_buy_swap                  11.273301
-token0_daily_amount_sell_swap                 -7.499795
+token0_daily_amount_sell_swap                 -7.499795q
 token0_daily_amount_net_swap                   3.773506
 token0_daily_amount_cum_buy_swap              11.273301
 token0_daily_amount_cum_sell_swap             -7.499795
