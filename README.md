@@ -353,7 +353,7 @@ token0_daily_price_min_swap                 1645.132325
 token0_daily_price_max_swap                 1292.546316
 token0_daily_price_std_swap                   19.663286
 token0_daily_amount_buy_swap                  11.273301
-token0_daily_amount_sell_swap                 -7.499795q
+token0_daily_amount_sell_swap                 -7.499795
 token0_daily_amount_net_swap                   3.773506
 token0_daily_amount_cum_buy_swap              11.273301
 token0_daily_amount_cum_sell_swap             -7.499795
