@@ -35,10 +35,10 @@
       </ul>
     </li>
     <li>
-      <a href="#methods">Methods</a>                                                      <!-- 4. Methods -->
+      <a href="#aggregated-dataset">Aggregated Dataset</a>   <!-- 4.2 Methods-2 -->
       <ul>
-        <li><a href="#method-1">Compute Aggregaed Dataset</a></li>                          <!-- 4.1 Methods-1 -->
-        <li><a href="#method-2">Comparison of Daily Aggregated Data for ETH/USDC</a></li>   <!-- 4.2 Methods-2 -->
+        <li><a href="#aggregated-method">Method of Computing Aggregaed Data</a></li>
+        <li><a href="#aggregated-results">Comparison of Daily Aggregated Data for ETH/USDC</a></li>
       </ul>
     </li>
     <li>
@@ -252,8 +252,8 @@ Name: 110352, dtype: object
    
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<a name="methods"></a>
-## 4. Methods
+<a name="aggregated-dataset"></a>
+## 4. Aggregated Dataset
 * <a href="https://github.com/rkevinchao/blockchain-data-analysis/blob/main/01b_compute_aggregations_table.ipynb">01b\_compute\_aggregations\_table.ipynb</a>: This Jupyter Notebook includes the code used to generate the results presented in *Session 4*. 
 
 In this sesson, I first present the methods I used to compute `daily` and `hourly` aggregated tables for the Ekubo Protocol dataset in *Session 4.1*. The computation includes (1) the aggregated token price for each trading pair and (2) number of tokens in the pool for a given day. 
@@ -262,8 +262,8 @@ Next, I compared the daily aggregated ETH/USDC price with public available ETH/U
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<a name="method-1"></a>
-### 4.1 Compute Aggregaed Dataset
+<a name="aggregated-method"></a>
+### 4.1 Method of Computing Aggregaed Data
 * The aggregated price for trading pair tokens, such as ETH/USDC, is computed with the ***median*** value within a time range (e.g., in a day or in an hour) from the token ratio (`TOKEN1/TOKEN0`) of the token amount. 
 
 	* To compute price of trading pair:
@@ -323,7 +323,7 @@ Below are the columns included in the aggregated csv files:
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<a name="method-2"></a>
+<a name="aggregated-results"></a>
 ### 4.2 Comparison of Daily Aggregated Data for ETH/USDC 
 
 * Example outputs of a row for the ETH/USDC file:  
@@ -374,9 +374,8 @@ Name: 22, dtype: object
 <a name="market-depth-analysis"></a>
 ## 5. Market Depth Analysis
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+* <a href="https://github.com/rkevinchao/blockchain-data-analysis/blob/main/02a_market_depth_anaylsis.ipynb">02a\_market\_depth\_anaylsis.ipynb</a>: This Jupyter Notebook includes the code used to generate the results presented in *Session 5*. 
 
-_For more examples, please refer to the [Documentation](https://example.com)_
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
